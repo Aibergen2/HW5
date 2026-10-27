@@ -1,10 +1,12 @@
 package com.example.grid
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Card
+import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -21,7 +23,17 @@ fun TopicCard(topic: Topic, modifier: Modifier = Modifier) {
                 contentDescription = null,
                 modifier = Modifier.size(68.dp)
             )
-            Text(text = stringResource(topic.name))
+            Column{
+                Text(text = stringResource(topic.name))
+                Row{
+                    Icon(
+                        painter = painterResource(R.drawable.ic_grain),
+                        contentDescription = null
+                    )
+                    Text(text = topic.availableCourses.toString())
+                }
+            }
+
         }
     }
 }
