@@ -19,7 +19,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             GridTheme {
-                TopicCard(DataSource.topics[0])
+                TopicGrid()
             }
         }
     }
