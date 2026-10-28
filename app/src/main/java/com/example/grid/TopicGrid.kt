@@ -15,6 +15,7 @@ fun TopicGrid(modifier: Modifier = Modifier) {
         columns = GridCells.Fixed(2),
         verticalArrangement = Arrangement.spacedBy(8.dp),
         horizontalArrangement = Arrangement.spacedBy(8.dp),
+        contentPadding = PaddingValues(8.dp),
         modifier = modifier
     ){
         items(DataSource.topics) { topic ->
