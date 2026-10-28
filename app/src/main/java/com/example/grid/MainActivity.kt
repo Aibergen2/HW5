@@ -19,7 +19,9 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             GridTheme {
-                TopicGrid()
+                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                    TopicGrid(modifier = Modifier.padding(innerPadding))
+                }
             }
         }
     }
