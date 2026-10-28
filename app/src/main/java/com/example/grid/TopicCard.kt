@@ -4,6 +4,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.offset
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Card
 import androidx.compose.material3.Icon
@@ -23,7 +24,7 @@ fun TopicCard(topic: Topic, modifier: Modifier = Modifier) {
                 contentDescription = null,
                 modifier = Modifier.size(68.dp)
             )
-            Column{
+            Column(modifier = Modifier.padding(start = 16.dp, top = 16.dp)){
                 Text(text = stringResource(topic.name))
                 Row{
                     Icon(
